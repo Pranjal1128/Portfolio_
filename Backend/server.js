@@ -8,8 +8,13 @@ dotenv.config();
 
 const app = express();
 
+const corsOptions = {
+  origin: 'https://pranjalport.vercel.app',
+};
+
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
