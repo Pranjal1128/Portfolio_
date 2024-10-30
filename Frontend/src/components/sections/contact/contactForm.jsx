@@ -23,7 +23,7 @@ const ContactForm = () => {
         setIsSubmitting(true);
         try {
             // Send the form data to the backend
-            await axios.post('https://portfolio-2aj3-qc93f08o1-optislugprank11-gmailcoms-projects.vercel.app/send-email', formData);
+            await axios.post('https://pranjalportbackend.vercel.app/send-email', formData);
             setSuccessMessage('Message sent successfully!');
         } catch (error) {
             setSuccessMessage('Error sending message. Please try again.');
