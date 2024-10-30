@@ -19,11 +19,6 @@ const menuList = [
         label: "Resume"
     },
     {
-        id: 4,
-        path: "services",
-        label: "Services"
-    },
-    {
         id: 5,
         path: "portfolio",
         label: "Projects"
@@ -69,9 +64,7 @@ const Header = () => {
                             <nav className="main-menu navbar-expand-lg">
                                 <div className="navbar-header">
                                     <div className="mobile-logo">
-                                        <a href="#">
-                                            <img src={logo} alt="Logo" title="Logo" />
-                                        </a>
+                                        <span style={{fontFamily:'monospace', fontWeight:'bold', color:'burlywood'}}>P</span> <span style={{fontFamily:'monospace', fontWeight:'bold', color:'turquoise'}}>N</span>
                                     </div>
                                     {/* Toggle Button */}
                                     <button type="button" className="navbar-toggle" data-bs-toggle="collapse" data-bs-target=".navbar-collapse">

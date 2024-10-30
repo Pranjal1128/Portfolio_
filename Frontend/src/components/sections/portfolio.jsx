@@ -52,7 +52,7 @@ const Portfolio = () => {
                     <div className="col-xl-12 col-lg-12">
                         <Title>
                             <p>Works</p>
-                            <h2>Creative Portfolio</h2>
+                            <h2>Projects</h2>
                         </Title>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ const Portfolio = () => {
                     {filteredCategory.map((item, id) => <li key={id} onClick={() => handleCategoryClick(item)} className={item === category ? "current" : ""}>{item}</li>)}
                 </ul> */}
                 <div className="row project-masonry-active">
-                    {filteredProjects.map(({category, id, src, title})=><Card key={id} category={category} title={title} src={src} animationClass={animationClass} openLightbox={openLightbox}/>)}
+                    {filteredProjects.map(({category, id, src, title, link})=><Card key={id} category={category} title={title} src={src} animationClass={animationClass} openLightbox={openLightbox} link={link}/>)}
                 </div>
             </div>
             <Lightbox selectedImage={selectedImage} onClose={closeLightbox} />
@@ -71,13 +71,13 @@ const Portfolio = () => {
 export default Portfolio;
 
 
-const Card = ({category, title, src, animationClass, openLightbox}) => {
+const Card = ({category, title, src, animationClass, openLightbox, link}) => {
     return (
         <div className={`col-lg-4 col-md-6 item branding ${animationClass}`}>
             <div className="project-item style-two wow fadeInUp delay-0-2s">
                 <div className="project-image">
                     <img src={src} alt="Project" />
-                    <div onClick={() => openLightbox(src)} className="details-btn work-popup"><i><RiArrowRightUpLine/></i></div>
+                    <a onClick={() => openLightbox(src)} href={link} className="details-btn work-popup"><i><RiArrowRightUpLine/></i></a>
                 </div>
                 <div className="project-content">
                     <span className="sub-title">{category}</span>

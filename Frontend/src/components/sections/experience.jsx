@@ -14,8 +14,8 @@ const Experience = () => {
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
                         <Title>
-                            <p>Experience</p>
-                            <h2> Professional Resume</h2>
+                            <p>Achievement</p>
+                            <h2> Education & Certificates</h2>
                         </Title>
                     </div>
                 </div>
@@ -25,7 +25,7 @@ const Experience = () => {
                         <div className="col-xl-6 col-md-6">
                             <div className="experience-list">
                                 {
-                                    workExperience.map(({ id, institute, position, years }) => <Card key={id} institute={institute} position={position} years={years} />)
+                                    workExperience.map(({ id, institute, position, years, link }) => <Card key={id} institute={institute} position={position} years={years} link={link}/>)
                                 }
                             </div>
                         </div>
@@ -49,10 +49,10 @@ const Experience = () => {
 export default Experience
 
 
-const Card = ({ institute, position, years }) => {
+const Card = ({ institute, position, years, link }) => {
     return (
         <SlideUp>
-            <div className="resume-item">
+            <a href={link} className="resume-item">
                 <div className="icon">
                     <i><RiBookLine /></i>
                 </div>
@@ -61,7 +61,7 @@ const Card = ({ institute, position, years }) => {
                     <h4>{institute}</h4>
                     <span className="company">{position}</span>
                 </div>
-            </div>
+            </a>
         </SlideUp>
     )
 }
