@@ -12,6 +12,10 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.json({message: "Hello"});
+}
+
 // Route for handling email submission
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
