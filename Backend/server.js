@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.json({message: "Hello"});
-}
+})
 
 // Route for handling email submission
 app.post('/send-email', async (req, res) => {
