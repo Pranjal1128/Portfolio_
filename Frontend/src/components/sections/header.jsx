@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import logo from "../../assets/images/logo.png"
+import logo from "../../assets/images/logo.jpg"
 import { Link } from 'react-scroll'
 
 const menuList = [
@@ -16,7 +16,7 @@ const menuList = [
     {
         id: 3,
         path: "resume",
-        label: "Resume"
+        label: "Achievements"
     },
     {
         id: 5,

@@ -14,8 +14,8 @@ const Experience = () => {
                 <div className="row">
                     <div className="col-xl-12 col-lg-12">
                         <Title>
-                            <p>Achievement</p>
-                            <h2> Education & Certificates</h2>
+                            <p>Certificates</p>
+                            <h2> Certificates & Education </h2>
                         </Title>
                     </div>
                 </div>
@@ -52,7 +52,7 @@ export default Experience
 const Card = ({ institute, position, years, link }) => {
     return (
         <SlideUp>
-            <a href={link} className="resume-item">
+            <a href={link} className="resume-item" target='_blank'>
                 <div className="icon">
                     <i><RiBookLine /></i>
                 </div>

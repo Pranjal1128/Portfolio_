@@ -77,7 +77,7 @@ const Card = ({category, title, src, animationClass, openLightbox, link}) => {
             <div className="project-item style-two wow fadeInUp delay-0-2s">
                 <div className="project-image">
                     <img src={src} alt="Project" />
-                    <a onClick={() => openLightbox(src)} href={link} className="details-btn work-popup"><i><RiArrowRightUpLine/></i></a>
+                    <a onClick={() => openLightbox(src)} href={link} target='_blank' className="details-btn work-popup"><i><RiArrowRightUpLine/></i></a>
                 </div>
                 <div className="project-content">
                     <span className="sub-title">{category}</span>

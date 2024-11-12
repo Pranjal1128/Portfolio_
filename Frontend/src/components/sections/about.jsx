@@ -20,7 +20,7 @@ const About = () => {
                 <img src={profile_img} alt="About Me" />
                 <h2>Pranjal Naman</h2>
                 <div className="about-btn btn-one text-center">
-                  <h6>Available for Work</h6>
+                  <a href="#contact" smooth={true} offset={0} duration={500}><h6>Available for Work</h6></a>
                   <div className="circle pulse color-pulse"></div>
                 </div>
                 <div className="about-social text-center">
@@ -80,6 +80,12 @@ const About = () => {
                     </i>
                   </a>
                 </div>
+                {/* <div className="hero-btns">
+                  <div> 
+                    <span style={{fontSize: '20px', fontWeight: '600'}}> Skills : </span>
+                    <span>C++ , JavaScript, TypeScript, SQL, React JS, Next JS, Node JS, Express JS</span>
+                  </div>
+                </div> */}
               </SlideUp>
               {/* <SlideUp>
                                 <ul className="list-style-one two-column">
@@ -90,7 +96,7 @@ const About = () => {
                                     <li><i><RiArrowRightUpLine size={18} /></i> Web Design</li>
                                     <li><i><RiArrowRightUpLine size={18} /></i> Product Design</li>
                                 </ul>
-                            </SlideUp> */}
+                  </SlideUp> */}
             </div>
           </div>
           {/*  END ABOUT TEXT DESIGN AREA  */}
